@@ -1,4 +1,4 @@
-# DevProfile – Application Web Laravel
+![Capture d'écran 2025-05-22 203644](https://github.com/user-attachments/assets/23d1df25-3e52-443b-a498-5bd3bc7d3425)# DevProfile – Application Web Laravel
 
 **DevProfile** est une application web moderne développée avec **Laravel 11**, permettant aux développeurs de créer un profil personnel, de gérer leurs projets et compétences, et de générer un CV téléchargeable au format PDF. Ce projet a été réalisé dans le cadre du module *Développement Web Avancé* à l’École Supérieure de Technologie.
 ![image](https://github.com/user-attachments/assets/9c6e040a-b16c-4e8e-bdbf-c2f44bd2ad1a)
@@ -59,6 +59,10 @@ L’application comprend les modules suivants :
 ### Génération de CV PDF
 - Bouton pour télécharger le CV généré dynamiquement avec les données du profil.
 - Intégration avec DomPDF.
+
+![Capture d'écran 2025-05-22 203609](https://github.com/user-attachments/assets/366058a2-0010-443f-ab79-05818b5b347c)
+![Capture d'écran 2025-05-22 203630](https://github.com/user-attachments/assets/31c8a254-66c4-4bd5-b63e-3b9949dfb1e0)
+![Capture d'écran 2025-05-22 203644](https://github.com/user-attachments/assets/fc2ab57c-7299-4fab-bd26-968ef344c311)
 
 ![image](https://github.com/user-attachments/assets/2d30c63a-ac6c-4197-9196-be10acdbad4f)
 ![image](https://github.com/user-attachments/assets/c2665ce0-e3fa-46e9-bd45-e2f416a858b4)

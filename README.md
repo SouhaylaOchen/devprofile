@@ -1,126 +1,167 @@
-![image](https://github.com/user-attachments/assets/6fc73539-fcad-496a-b00c-b1a467e4229f)
+# DevProfile – Application Web Laravel
+
+**DevProfile** est une application web moderne développée avec **Laravel 11**, permettant aux développeurs de créer un profil personnel, de gérer leurs projets et compétences, et de générer un CV téléchargeable au format PDF. Ce projet a été réalisé dans le cadre du module *Développement Web Avancé* à l’École Supérieure de Technologie.
+![image](https://github.com/user-attachments/assets/fa8a9699-2c29-4280-a911-6b8c5d3e3bf2)
+![image](https://github.com/user-attachments/assets/bb3c6e9d-9876-4442-b1ef-7b9c1528b840)
+![image](https://github.com/user-attachments/assets/f6558781-dfc8-4e0d-9c1c-e79dc2082854)
+![image](https://github.com/user-attachments/assets/17301db1-981d-4ee3-9423-0864a56f9229)
+
+---
+
+## 📌 Objectifs du projet
+
+Ce projet vise à :
+
+- Mettre en œuvre l'architecture MVC avec Laravel.
+- Maîtriser la gestion des routes, des contrôleurs, et des vues avec Blade.
+- Implémenter un système d’authentification sécurisé.
+- Manipuler une base de données relationnelle avec Eloquent ORM.
+- Générer dynamiquement des fichiers PDF avec les données utilisateur.
+- Présenter une application fonctionnelle et professionnelle.
+
+---
+
+## ⚙️ Fonctionnalités principales
+
+L’application comprend les modules suivants :
+
+### Authentification
+- Inscription, connexion, déconnexion via **Laravel Breeze**.
+- Protection des routes par middleware `auth`.
 
 
-````markdown
-# DevProfile – Application Laravel
+### Profil utilisateur
+- Modification des informations : nom, email, titre, biographie.
+- URL publique de type `/profile/username`.
 
-DevProfile est une application web développée avec Laravel, conçue pour permettre aux développeurs de créer un profil professionnel en ligne, de gérer leurs projets et compétences, et de générer un CV en format PDF. Ce projet a été réalisé dans le cadre du module **Développement Web Avancé**.
+![image](https://github.com/user-attachments/assets/74e6d4d3-93c8-4d54-b29b-c3681f04d827)
+![image](https://github.com/user-attachments/assets/57f3991b-cebf-4c26-9da6-86cb16c17152)
+![image](https://github.com/user-attachments/assets/a80b0968-5a69-443d-9e7e-21b7b024fd9d)
 
-## 🚀 Objectifs du projet
 
-- Créer une application Laravel fonctionnelle en respectant l'architecture MVC.
-- Implémenter un système complet d’authentification.
-- Gérer dynamiquement des données utilisateurs (projets et compétences).
-- Générer un CV à partir des données saisies.
-- Structurer un projet web moderne prêt à être déployé.
+### Gestion des projets
+- Ajout, modification, suppression de projets avec titre, description et lien.
+- Affichage des projets sur la page de profil public.
 
-## 🔧 Fonctionnalités principales
+![image](https://github.com/user-attachments/assets/35f01c75-e5fc-4e17-9183-f5bc23a58152)
+![image](https://github.com/user-attachments/assets/ba847ab1-b784-43c6-abc3-b5c6d06e8422)
 
-- Inscription, connexion et déconnexion via Laravel Breeze.
-- Modification du profil utilisateur (nom, titre, bio, email...).
-- CRUD complet des projets (titre, description, lien).
-- Ajout et suppression de compétences.
-- Génération automatique d’un fichier CV au format PDF.
-- Affichage d’un profil public via une URL unique (`/profile/username`).
+### Compétences
+- Ajout et suppression de compétences (ex. : PHP, Laravel, JavaScript).
+- Affichage sur le profil utilisateur.
 
-## 🧱 Architecture du projet
+![image](https://github.com/user-attachments/assets/2cac7704-a1a1-44d1-90b5-92035c9164c8)
+![image](https://github.com/user-attachments/assets/be3c409e-8ada-417b-aafb-2af52780e742)
 
-L’application suit le modèle **MVC** (Modèle - Vue - Contrôleur) :
+### Génération de CV PDF
+- Bouton pour télécharger le CV généré dynamiquement avec les données du profil.
+- Intégration avec DomPDF.
+
+![image](https://github.com/user-attachments/assets/2d30c63a-ac6c-4197-9196-be10acdbad4f)
+![image](https://github.com/user-attachments/assets/c2665ce0-e3fa-46e9-bd45-e2f416a858b4)
+
+---
+
+## 🧱 Architecture technique
+
+L'application suit l'architecture **MVC** :
 
 - **Modèles** : User, Project, Skill
-- **Vues** : Blade templates
 - **Contrôleurs** : ProfileController, ProjectController, SkillController, PDFController
+- **Vues** : gérées avec Blade
 - **Relations Eloquent** :
-  - Un utilisateur possède plusieurs projets
-  - Un utilisateur possède plusieurs compétences
+  - Un utilisateur possède plusieurs projets.
+  - Un utilisateur possède plusieurs compétences.
 
-## 📂 Technologies utilisées
+📸 *Ajouter ici une capture ou schéma des relations entre les entités.*
 
-- Laravel 11
-- Laravel Breeze (authentification)
-- PHP 8.2+
-- MySQL
-- Tailwind CSS
-- DomPDF (pour la génération PDF)
-- Git & GitHub
+---
 
-## 🖥️ Aperçu de l'application
+## 🛠️ Technologies utilisées
 
-> Veuillez insérer ici des captures d’écran de l’application (page de profil, gestion des projets, aperçu du CV PDF, etc.)
+| Composant               | Détail                          |
+|-------------------------|----------------------------------|
+| Framework Backend       | Laravel 11                      |
+| Authentification        | Laravel Breeze (stack Blade)    |
+| Base de Données         | MySQL 8.x                       |
+| Stylisation             | Tailwind CSS                    |
+| Génération de PDF       | Laravel DomPDF                  |
+| Gestion des Assets      | Node.js + NPM                   |
 
-## ▶️ Installation locale
+---
+
+## 🚀 Installation locale
 
 ### Prérequis
-
 - PHP >= 8.2
-- Composer
 - MySQL
-- Node.js & npm
+- Composer
+- Node.js + npm
 
 ### Étapes
 
-1. Cloner le dépôt :
-   ```bash
-   git clone https://github.com/votre-utilisateur/devprofile.git
-   cd devprofile
-````
+1. Cloner le projet :
+```bash
+git clone https://github.com/SouhaylaOchen/devprofile.git
+cd devprofile
+```
 
-2. Installer les dépendances PHP et JS :
+2. Installer les dépendances :
+```bash
+composer install
+npm install
+```
 
-   ```bash
-   composer install
-   npm install && npm run dev
-   ```
+3. Configurer l'environnement :
+```bash
+cp .env.example .env
+php artisan key:generate
+```
 
-3. Configurer le fichier `.env` :
-
-   ```bash
-   cp .env.example .env
-   php artisan key:generate
-   ```
-
-4. Créer la base de données MySQL et configurer l’accès dans `.env`.
+4. Configurer la base de données dans le fichier `.env`.
 
 5. Lancer les migrations :
+```bash
+php artisan migrate
+```
 
-   ```bash
-   php artisan migrate
-   ```
+6. Compiler les assets :
+```bash
+npm run build
+```
 
-6. Lancer le serveur :
+7. Démarrer le serveur :
+```bash
+php artisan serve
+```
 
-   ```bash
-   php artisan serve
-   ```
+---
 
-7. Accéder à l’application via `http://localhost:8000`.
+## ✅ Tests effectués
 
-## 🧪 Tests manuels réalisés
+| Fonctionnalité        | Statut | Méthode                   |
+|------------------------|--------|---------------------------|
+| Authentification       | OK     | Formulaires Laravel Breeze|
+| CRUD Projets           | OK     | Tests manuels             |
+| Gestion des compétences| OK     | Ajout/Suppression         |
+| Génération PDF         | OK     | Téléchargement fonctionnel|
 
-* Authentification (inscription/connexion)
-* Gestion de profil
-* CRUD projets et compétences
-* Affichage du profil public
-* Génération du PDF
+---
 
 ## 📈 Améliorations futures
 
-* Ajout d’une prévisualisation du CV avant génération.
-* Upload d’image de profil.
-* Version multilingue (FR/EN).
-* Version mobile ou PWA.
-* Gestion des rôles utilisateurs (admin, visiteur...).
+Voici quelques pistes pour faire évoluer l’application :
 
-## 📬 Contribution
-
-Ce projet a été réalisé par Souhayla Ouchen dans un cadre académique. Toute contribution ou suggestion est la bienvenue.
+- Ajouter une **prévisualisation** du CV.
+- Permettre l’**upload d’une photo de profil**.
+- Ajouter une **version mobile** ou une **PWA**.
+- Ajouter la **prise en charge du multilingue** (FR/EN).
+- Mettre en place des **rôles utilisateurs** (admin, visiteur, etc.).
 
 ---
 
-Merci pour votre intérêt pour DevProfile !
+## 📜 Remerciements
 
-```
+Ce projet a été encadré par **M. RABHI Ouzayr** dans le cadre du module *Développement Web Avancé*. Réalisé par **Souhayla Ouchen** et **Oumaima Marzak**.
 
----
 
-```

@@ -33,7 +33,7 @@ DevProfile est une application web développée avec Laravel 12, conçue pour pe
 1. Cloner ou copier le projet :
 
 ```bash
-git clone https://votre-repo-github.com/username/devprofile.git
+git clone https://votre-repo-github.com/SouhaylaOchen/devprofile.git
 cd devprofile
 ````
 

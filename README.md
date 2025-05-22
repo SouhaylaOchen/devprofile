@@ -1,135 +1,126 @@
-# 💼 DevProfile — Application Laravel de gestion de profils développeurs
+![image](https://github.com/user-attachments/assets/6fc73539-fcad-496a-b00c-b1a467e4229f)
 
-DevProfile est une application web développée avec Laravel 12, conçue pour permettre aux développeurs de créer, gérer et partager leur profil professionnel, leurs projets et leurs compétences. Elle permet également de générer automatiquement un CV en PDF basé sur les informations du profil.
 
----
+````markdown
+# DevProfile – Application Laravel
 
-## 🖥️ Fonctionnalités principales
+DevProfile est une application web développée avec Laravel, conçue pour permettre aux développeurs de créer un profil professionnel en ligne, de gérer leurs projets et compétences, et de générer un CV en format PDF. Ce projet a été réalisé dans le cadre du module **Développement Web Avancé**.
 
-- Authentification avec Laravel Breeze
-- Édition du profil utilisateur (nom, email, username, titre, biographie)
-- Ajout, modification et suppression de projets
-- Ajout et suppression de compétences
-- Affichage public du profil via `/profile/{username}`
-- Téléchargement du profil au format PDF
-- Interface responsive et propre avec Tailwind CSS
+## 🚀 Objectifs du projet
 
----
+- Créer une application Laravel fonctionnelle en respectant l'architecture MVC.
+- Implémenter un système complet d’authentification.
+- Gérer dynamiquement des données utilisateurs (projets et compétences).
+- Générer un CV à partir des données saisies.
+- Structurer un projet web moderne prêt à être déployé.
 
-## 🚀 Technologies utilisées
+## 🔧 Fonctionnalités principales
 
-- PHP 8.2
-- Laravel 12
-- Laravel Breeze (Blade)
+- Inscription, connexion et déconnexion via Laravel Breeze.
+- Modification du profil utilisateur (nom, titre, bio, email...).
+- CRUD complet des projets (titre, description, lien).
+- Ajout et suppression de compétences.
+- Génération automatique d’un fichier CV au format PDF.
+- Affichage d’un profil public via une URL unique (`/profile/username`).
+
+## 🧱 Architecture du projet
+
+L’application suit le modèle **MVC** (Modèle - Vue - Contrôleur) :
+
+- **Modèles** : User, Project, Skill
+- **Vues** : Blade templates
+- **Contrôleurs** : ProfileController, ProjectController, SkillController, PDFController
+- **Relations Eloquent** :
+  - Un utilisateur possède plusieurs projets
+  - Un utilisateur possède plusieurs compétences
+
+## 📂 Technologies utilisées
+
+- Laravel 11
+- Laravel Breeze (authentification)
+- PHP 8.2+
+- MySQL
 - Tailwind CSS
-- MySQL / MariaDB
-- Vite (pour les assets)
-- DomPDF (pour la génération du PDF)
+- DomPDF (pour la génération PDF)
+- Git & GitHub
 
----
+## 🖥️ Aperçu de l'application
 
-## ⚙️ Installation et configuration
+> Veuillez insérer ici des captures d’écran de l’application (page de profil, gestion des projets, aperçu du CV PDF, etc.)
 
-1. Cloner ou copier le projet :
+## ▶️ Installation locale
 
-```bash
-git clone https://votre-repo-github.com/SouhaylaOchen/devprofile.git
-cd devprofile
+### Prérequis
+
+- PHP >= 8.2
+- Composer
+- MySQL
+- Node.js & npm
+
+### Étapes
+
+1. Cloner le dépôt :
+   ```bash
+   git clone https://github.com/votre-utilisateur/devprofile.git
+   cd devprofile
 ````
 
-2. Installer les dépendances :
+2. Installer les dépendances PHP et JS :
 
-```bash
-composer install
-npm install && npm run dev
-```
+   ```bash
+   composer install
+   npm install && npm run dev
+   ```
 
-3. Copier le fichier `.env` et générer la clé :
+3. Configurer le fichier `.env` :
 
-```bash
-cp .env.example .env
-php artisan key:generate
-```
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
 
-4. Configurer la base de données dans le fichier `.env` :
-
-```
-DB_DATABASE=devprofile
-DB_USERNAME=root
-DB_PASSWORD=...
-```
+4. Créer la base de données MySQL et configurer l’accès dans `.env`.
 
 5. Lancer les migrations :
 
-```bash
-php artisan migrate
+   ```bash
+   php artisan migrate
+   ```
+
+6. Lancer le serveur :
+
+   ```bash
+   php artisan serve
+   ```
+
+7. Accéder à l’application via `http://localhost:8000`.
+
+## 🧪 Tests manuels réalisés
+
+* Authentification (inscription/connexion)
+* Gestion de profil
+* CRUD projets et compétences
+* Affichage du profil public
+* Génération du PDF
+
+## 📈 Améliorations futures
+
+* Ajout d’une prévisualisation du CV avant génération.
+* Upload d’image de profil.
+* Version multilingue (FR/EN).
+* Version mobile ou PWA.
+* Gestion des rôles utilisateurs (admin, visiteur...).
+
+## 📬 Contribution
+
+Ce projet a été réalisé par Souhayla Ouchen dans un cadre académique. Toute contribution ou suggestion est la bienvenue.
+
+---
+
+Merci pour votre intérêt pour DevProfile !
+
 ```
 
-6. Démarrer le serveur :
-
-```bash
-php artisan serve
-```
-
-Accéder à l’application : [http://127.0.0.1:8000](http://127.0.0.1:8000)
-
 ---
-
-## 🧪 Navigation & Pages
-
-* Tableau de bord : `/dashboard`
-* Profil utilisateur : `/profile`
-* Liste des projets : `/projects`
-* Liste des compétences : `/skills`
-* Profil public : `/profile/{username}`
-* Génération PDF : `/pdf/{username}`
-
----
-
-## 📂 Structure du projet
-
-* `routes/web.php` : routes principales
-* `app/Http/Controllers` : contrôleurs Laravel
-* `resources/views` : interfaces utilisateur (Blade)
-* `database/migrations` : création des tables
-
----
-
-## 🔐 Sécurité
-
-* Les routes sont protégées par le middleware `auth`
-* Les utilisateurs non connectés sont redirigés vers `/login`
-* Chaque utilisateur ne peut voir ou modifier que ses propres données
-
----
-
-## 📄 Génération de CV en PDF
-
-Le fichier PDF est généré automatiquement à partir de la vue :
 
 ```
-resources/views/pdf/cv.blade.php
-```
-
-Accessible via : `/pdf/{username}`
-
----
-
-## 🧑‍💻 Réalisé par
-
-Projet académique réalisé dans le cadre de la formation :
-
-* 🎓 1ère année — InGénierer Logiciel & Cybersécurité
-* 👤 Développé par : \[Souhayla Ouchen et Oumayma Marzak]
-* 🧑‍🏫 Encadré par : \[RABHI Ouzayr 
-]
-
----
-
-## ✅ État du projet
-
-✔️ Finalisé et testé
-📄 Rapport disponible séparément
-📦 Prêt à être déployé ou livré
-
----

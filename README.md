@@ -8,7 +8,7 @@
 
 ---
 
-## 📌 Objectifs du projet
+##  Objectifs du projet
 
 Ce projet vise à :
 
@@ -21,7 +21,7 @@ Ce projet vise à :
 
 ---
 
-## ⚙️ Fonctionnalités principales
+## ⚙ Fonctionnalités principales
 
 L’application comprend les modules suivants :
 
@@ -62,7 +62,7 @@ L’application comprend les modules suivants :
 
 ---
 
-## 🧱 Architecture technique
+## Architecture technique
 
 L'application suit l'architecture **MVC** :
 
@@ -73,11 +73,10 @@ L'application suit l'architecture **MVC** :
   - Un utilisateur possède plusieurs projets.
   - Un utilisateur possède plusieurs compétences.
 
-📸 *Ajouter ici une capture ou schéma des relations entre les entités.*
 
 ---
 
-## 🛠️ Technologies utilisées
+##  Technologies utilisées
 
 | Composant               | Détail                          |
 |-------------------------|----------------------------------|
@@ -90,7 +89,7 @@ L'application suit l'architecture **MVC** :
 
 ---
 
-## 🚀 Installation locale
+##  Installation locale
 
 ### Prérequis
 - PHP >= 8.2
@@ -137,7 +136,7 @@ php artisan serve
 
 ---
 
-## ✅ Tests effectués
+##  Tests effectués
 
 | Fonctionnalité        | Statut | Méthode                   |
 |------------------------|--------|---------------------------|
@@ -148,7 +147,7 @@ php artisan serve
 
 ---
 
-## 📈 Améliorations futures
+##  Améliorations futures
 
 Voici quelques pistes pour faire évoluer l’application :
 
@@ -160,8 +159,14 @@ Voici quelques pistes pour faire évoluer l’application :
 
 ---
 
-## 📜 Remerciements
 
-Ce projet a été encadré par **M. RABHI Ouzayr** dans le cadre du module *Développement Web Avancé*. Réalisé par **Souhayla Ouchen** et **Oumaima Marzak**.
+##  Réalisé par
+
+Projet académique réalisé dans le cadre de la formation :
+
+*  1ère année — InGénierer Logiciel & Cybersécurité
+*  Développé par : Souhayla Ouchen ET Oumaima Marzak  
+*  Encadré par :RABHI Ouzayr 
+
 
 

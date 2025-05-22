@@ -22,7 +22,7 @@ Ce projet vise à :
 
 ---
 
-## ⚙ Fonctionnalités principales
+## Fonctionnalités principales
 
 L’application comprend les modules suivants :
 
@@ -34,10 +34,12 @@ L’application comprend les modules suivants :
 ### Profil utilisateur
 - Modification des informations : nom, email, titre, biographie.
 - URL publique de type `/profile/username`.
+![Capture d'écran 2025-05-22 203203](https://github.com/user-attachments/assets/554505d4-7e59-4fb4-9351-66d588da9cc0)
+![Capture d'écran 2025-05-22 203318](https://github.com/user-attachments/assets/e1195b61-f35a-4d59-98f4-79906a65a1c6)
+![Capture d'écran 2025-05-22 203453](https://github.com/user-attachments/assets/c301acfb-6cf0-49fa-8b9d-b6efc8c0af56)
+![Capture d'écran 2025-05-22 203515](https://github.com/user-attachments/assets/9575de66-4259-423f-b855-476ed0838665)
+![Capture d'écran 2025-05-22 203537](https://github.com/user-attachments/assets/8001f286-97b0-4f10-bd73-638006350faf)
 
-![image](https://github.com/user-attachments/assets/74e6d4d3-93c8-4d54-b29b-c3681f04d827)
-![image](https://github.com/user-attachments/assets/57f3991b-cebf-4c26-9da6-86cb16c17152)
-![image](https://github.com/user-attachments/assets/a80b0968-5a69-443d-9e7e-21b7b024fd9d)
 
 
 ### Gestion des projets
